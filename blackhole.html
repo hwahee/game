@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Game</title>
+    <style>
+        #myCanvas {
+            background-color:skyblue;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="480" id="myCanvas"></canvas>
+    <div id="car settings">
+        speed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+        <input id="cspeed" type="range" min="0" max="100" value="0" onchange="c.speed = getElementById('cspeed').value/10;" />
+        10
+        <br />
+        direction: 0
+        <input id="cdir" type="range" min="0" max="360" value="0" onchange="c.dir = getElementById('cdir').value;" />
+        360
+    </div>
+    <hr />
+    <div id="blackhole settings">
+        size: 0
+        <input id="bholesize" type="range" min="0" max="400" value="200" onchange="bhole.setSize(getElementById('bholesize').value);" />
+        400
+        <br />
+        gravity: 0
+        <input id="gravity" type="range" min="0" max="196" value="98" onchange="bhole.setGravity(getElementById('gravity').value/10);" />
+        19.6
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
